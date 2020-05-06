@@ -1,6 +1,7 @@
 package com.federicopintaluba.dreamland.navigation.welcome
 
 import android.os.Bundle
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,31 +21,48 @@ class CharacterCreationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? = inflater.inflate(R.layout.fragment_character_creation, container, false)
 
-    var selectedClass: CharacterClass =
-        BarbarianClass()
+    private var selectedName = ""
+    private var selectedClass: CharacterClass = BarbarianClass()
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
         setCharacterClassSelectorListeners()
         setCreateCharacterButtonListener()
+        updateCharacterClassAttributesDescription()
     }
 
     private fun setCharacterClassSelectorListeners() {
         class_barbarian_radio.setOnClickListener {
-            character_class_description.text = getString(R.string.barbarian_description)
             selectedClass = BarbarianClass()
+            character_class_description.text = getString(R.string.barbarian_description)
+            updateCharacterClassAttributesDescription()
         }
 
         class_ranger_radio.setOnClickListener {
-            character_class_description.text = getString(R.string.ranger_description)
             selectedClass = RangerClass()
+            character_class_description.text = getString(R.string.ranger_description)
+            updateCharacterClassAttributesDescription()
         }
 
         class_sorcerer_radio.setOnClickListener {
-            character_class_description.text = getString(R.string.sorcerer_description)
             selectedClass = SorcererClass()
+            character_class_description.text = getString(R.string.sorcerer_description)
+            updateCharacterClassAttributesDescription()
         }
+    }
+
+    private fun updateCharacterClassAttributesDescription() {
+        character_class_attributes.text =
+            Html.fromHtml(
+                String.format(
+                    getString(R.string.character_class_attributes),
+                    selectedClass.startingHp,
+                    selectedClass.startingAtk,
+                    selectedClass.startingDef,
+                    selectedClass.startingSpeed
+                )
+            )
     }
 
     private fun setCreateCharacterButtonListener() {
@@ -61,6 +79,7 @@ class CharacterCreationFragment : Fragment() {
             return false
         }
 
+        selectedName = character_name_edit_text.text.toString()
         return true
     }
 
@@ -69,10 +88,12 @@ class CharacterCreationFragment : Fragment() {
 
         builder
             .setMessage(
-                String.format(
-                    getString(R.string.character_creation_confirmation_message),
-                    "Name",
-                    "Class"
+                Html.fromHtml(
+                    String.format(
+                        getString(R.string.character_creation_confirmation_message),
+                        selectedName,
+                        selectedClass.displayClassName()
+                    )
                 )
             )
             .setPositiveButton(R.string.start_adventure) { dialog, _ ->
