@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Dreamland</string>
     <string name="dreamland">Dreamland</string>
     <string name="welcome_screen_description">You don\'t have a created character yet, what are you waiting for?</string>
     <string name="create_character">Create Character</string>
@@ -9,4 +8,9 @@
     <string name="ranger">Ranger</string>
     <string name="barbarian">Barbarian</string>
     <string name="barbarian_description">For some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just a battle frenzy but also uncanny reflexes, resilience, and feats of strength.</string>
+    <string name="ranger_description">Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.</string>
+    <string name="sorcerer_description">Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. No one chooses sorcery; the power chooses the sorcerer.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

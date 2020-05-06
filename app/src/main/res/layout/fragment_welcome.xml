@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ContainerLayout"
+    tools:context=".WelcomeFragment">
+
+    <TextView
+        android:id="@+id/welcome_screen_title"
+        style="@style/Text.Title.Bold"
+        android:layout_marginTop="@dimen/margin_huge"
+        android:text="@string/dreamland"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome_screen_description"
+        style="@style/Text"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_big"
+        android:layout_marginEnd="@dimen/margin_big"
+        android:gravity="center_horizontal"
+        android:text="@string/welcome_screen_description"
+        app:layout_constraintBottom_toTopOf="@id/create_character_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_screen_title" />
+
+    <Button
+        android:id="@+id/create_character_button"
+        style="@style/WrapLayout"
+        android:layout_marginBottom="@dimen/margin_huge"
+        android:text="@string/create_character"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
