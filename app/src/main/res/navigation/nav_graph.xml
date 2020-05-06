@@ -9,7 +9,11 @@
         android:id="@+id/characterCreationFragment"
         android:name="com.federicopintaluba.dreamland.navigation.welcome.CharacterCreationFragment"
         android:label="fragment_character_creation"
-        tools:layout="@layout/fragment_character_creation" />
+        tools:layout="@layout/fragment_character_creation" >
+        <action
+            android:id="@+id/action_characterCreationFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.federicopintaluba.dreamland.navigation.welcome.WelcomeFragment"
@@ -20,4 +24,9 @@
             android:id="@+id/action_welcomeFragment_to_characterCreationFragment"
             app:destination="@id/characterCreationFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.federicopintaluba.dreamland.navigation.game.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" />
 </navigation>

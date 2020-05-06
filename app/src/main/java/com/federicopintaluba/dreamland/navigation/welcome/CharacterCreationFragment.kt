@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.federicopintaluba.dreamland.R
 import com.federicopintaluba.dreamland.character_classes.BarbarianClass
 import com.federicopintaluba.dreamland.character_classes.CharacterClass
@@ -61,7 +62,7 @@ class CharacterCreationFragment : Fragment() {
                     selectedClass.startingHp,
                     selectedClass.startingAtk,
                     selectedClass.startingDef,
-                    selectedClass.startingSpeed
+                    selectedClass.startingSpd
                 )
             )
     }
@@ -109,8 +110,22 @@ class CharacterCreationFragment : Fragment() {
     }
 
     private fun startAdventure() {
+        setCurrentPreferences()
+
+        val action =
+            CharacterCreationFragmentDirections.actionCharacterCreationFragmentToGameFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun setCurrentPreferences() {
         val preferenceManager = PreferenceManager(requireContext())
+        preferenceManager.characterName = selectedName
         preferenceManager.characterCreated = true
+        preferenceManager.characterMaxHp = selectedClass.startingHp
+        preferenceManager.characterCurrentHp = selectedClass.startingHp
+        preferenceManager.characterAtk = selectedClass.startingAtk
+        preferenceManager.characterDef = selectedClass.startingDef
+        preferenceManager.characterSpd = selectedClass.startingSpd
     }
 
     private fun showErrorDialog(errorMessage: String) {

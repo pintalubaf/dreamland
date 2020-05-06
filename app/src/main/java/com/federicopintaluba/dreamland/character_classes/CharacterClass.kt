@@ -4,6 +4,6 @@ interface CharacterClass {
     val startingHp: Int
     val startingAtk: Int
     val startingDef: Int
-    val startingSpeed: Int
+    val startingSpd: Int
     fun displayClassName(): String
 }

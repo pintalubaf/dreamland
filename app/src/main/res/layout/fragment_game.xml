@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_medium"
+    tools:context=".navigation.game.GameFragment">
+
+    <ImageView
+        android:id="@+id/character_class_icon"
+        style="@style/WrapLayout"
+        android:contentDescription="@string/character_class"
+        android:src="@drawable/ic_sorcerer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/character_name_value"
+        style="@style/Text.Title.Bold"
+        android:layout_marginStart="@dimen/margin_small"
+        app:layout_constraintBottom_toBottomOf="@id/character_class_icon"
+        app:layout_constraintStart_toEndOf="@id/character_class_icon"
+        app:layout_constraintTop_toTopOf="@id/character_class_icon"
+        tools:text="Character name" />
+
+    <TextView
+        android:id="@+id/character_hp_label"
+        style="@style/Text.Bold"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:drawableStart="@drawable/ic_hp"
+        android:drawablePadding="@dimen/padding_small"
+        android:text="@string/hp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/character_class_icon" />
+
+    <TextView
+        android:id="@+id/character_max_hp_value"
+        style="@style/Text"
+        app:layout_constraintBottom_toBottomOf="@id/character_hp_value"
+        app:layout_constraintStart_toEndOf="@id/character_hp_value"
+        app:layout_constraintTop_toTopOf="@id/character_hp_value"
+        tools:text="/100" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/character_max_hp_value" />
+
+    <TextView
+        android:id="@+id/character_hp_value"
+        style="@style/Text"
+        app:layout_constraintBottom_toBottomOf="@id/character_hp_label"
+        app:layout_constraintStart_toEndOf="@id/character_hp_label"
+        app:layout_constraintTop_toTopOf="@id/character_hp_label"
+        tools:text="10" />
+
+    <TextView
+        android:id="@+id/character_atk_label"
+        style="@style/Text.Bold"
+        android:layout_marginTop="@dimen/margin_small"
+        android:drawableStart="@drawable/ic_atk"
+        android:drawablePadding="@dimen/padding_small"
+        android:text="@string/atk"
+        app:layout_constraintStart_toStartOf="@id/character_hp_label"
+        app:layout_constraintTop_toBottomOf="@id/character_hp_label" />
+
+    <TextView
+        android:id="@+id/character_atk_value"
+        style="@style/Text"
+        app:layout_constraintBottom_toBottomOf="@id/character_atk_label"
+        app:layout_constraintStart_toEndOf="@id/character_atk_label"
+        app:layout_constraintTop_toTopOf="@id/character_atk_label"
+
+        tools:text="10" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/character_atk_value" />
+
+    <TextView
+        android:id="@+id/character_def_label"
+        style="@style/Text.Bold"
+        android:layout_marginTop="@dimen/margin_small"
+        android:drawableStart="@drawable/ic_def"
+        android:drawablePadding="@dimen/padding_small"
+        android:text="@string/def"
+        app:layout_constraintStart_toStartOf="@id/character_atk_label"
+        app:layout_constraintTop_toBottomOf="@id/character_atk_label" />
+
+    <TextView
+        android:id="@+id/character_def_value"
+        style="@style/Text"
+        app:layout_constraintBottom_toBottomOf="@id/character_def_label"
+        app:layout_constraintStart_toEndOf="@id/character_def_label"
+        app:layout_constraintTop_toTopOf="@id/character_def_label"
+        tools:text="10" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/character_def_value" />
+
+    <TextView
+        android:id="@+id/character_spd_label"
+        style="@style/Text.Bold"
+        android:layout_marginTop="@dimen/margin_small"
+        android:drawableStart="@drawable/ic_spd"
+        android:drawablePadding="@dimen/padding_small"
+        android:text="@string/spd"
+        app:layout_constraintStart_toStartOf="@id/character_def_label"
+        app:layout_constraintTop_toBottomOf="@id/character_def_label" />
+
+    <TextView
+        android:id="@+id/character_spd_value"
+        style="@style/Text"
+        app:layout_constraintBottom_toBottomOf="@id/character_spd_label"
+        app:layout_constraintStart_toEndOf="@id/character_spd_label"
+        app:layout_constraintTop_toTopOf="@id/character_spd_label"
+        tools:text="10" />
+</androidx.constraintlayout.widget.ConstraintLayout>
