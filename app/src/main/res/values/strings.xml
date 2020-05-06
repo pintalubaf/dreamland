@@ -2,5 +2,11 @@
     <string name="app_name">Dreamland</string>
     <string name="dreamland">Dreamland</string>
     <string name="welcome_screen_description">You don\'t have a created character yet, what are you waiting for?</string>
-    <string name="create_character">Create character</string>
+    <string name="create_character">Create Character</string>
+    <string name="character_creation_description">Welcome to the character creation, you are about to embark on a great adventure, select the following attributes wisely.</string>
+    <string name="what_s_your_name">What\'s your name?</string>
+    <string name="sorcerer">Sorcerer</string>
+    <string name="ranger">Ranger</string>
+    <string name="barbarian">Barbarian</string>
+    <string name="barbarian_description">For some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just a battle frenzy but also uncanny reflexes, resilience, and feats of strength.</string>
 </resources>

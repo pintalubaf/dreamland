@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ContainerLayout"
+    tools:context=".CharacterCreationFragment">
+
+    <TextView
+        android:id="@+id/character_creation_title"
+        style="@style/Text.Title.Bold"
+        android:layout_marginTop="@dimen/margin_huge"
+        android:text="@string/create_character"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/character_creation_description"
+        style="@style/Text"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_big"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_big"
+        android:gravity="center"
+        android:text="@string/character_creation_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/character_creation_title" />
+
+    <EditText
+        android:id="@+id/character_name_edit_text"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_big"
+        android:background="@drawable/shape_rounded_grey"
+        android:hint="@string/what_s_your_name"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords"
+        android:padding="@dimen/padding_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/character_creation_description" />
+
+    <RadioGroup
+        android:id="@+id/class_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_big"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/character_name_edit_text">
+
+        <RadioButton
+            android:id="@+id/class_barbarian_radio"
+            style="@style/CharacterRadioButton"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_barbarian"
+            android:text="@string/barbarian" />
+
+        <RadioButton
+            android:id="@+id/class_ranger_radio"
+            style="@style/CharacterRadioButton"
+            android:drawableTop="@drawable/ic_ranger"
+            android:text="@string/ranger" />
+
+        <RadioButton
+            android:id="@+id/class_sorcerer_radio"
+            style="@style/CharacterRadioButton"
+            android:drawableTop="@drawable/ic_sorcerer"
+            android:text="@string/sorcerer" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/character_class_description"
+        style="@style/Text"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_big"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_big"
+        android:gravity="center"
+        android:text="@string/barbarian_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/class_radio_group" />
+
+    <Button
+        android:id="@+id/create_character_button"
+        style="@style/WrapLayout"
+        android:text="@string/create_character"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/character_class_description"
+        app:layout_constraintVertical_bias="0.6" />
+</androidx.constraintlayout.widget.ConstraintLayout>
