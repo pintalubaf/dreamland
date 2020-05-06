@@ -1,0 +1,2 @@
+rootProject.name='Dreamland'
+include ':app'
