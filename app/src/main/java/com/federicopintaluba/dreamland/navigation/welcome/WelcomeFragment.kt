@@ -1,4 +1,4 @@
-package com.federicopintaluba.dreamland
+package com.federicopintaluba.dreamland.navigation.welcome
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.federicopintaluba.dreamland.R
 import kotlinx.android.synthetic.main.fragment_welcome.*
 
 class WelcomeFragment : Fragment() {
@@ -29,12 +30,5 @@ class WelcomeFragment : Fragment() {
 
             it.findNavController().navigate(action)
         }
-    }
-
-    companion object {
-
-        @JvmStatic
-        fun newInstance() =
-            WelcomeFragment()
     }
 }

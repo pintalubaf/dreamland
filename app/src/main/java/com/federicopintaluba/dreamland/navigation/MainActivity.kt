@@ -1,7 +1,8 @@
-package com.federicopintaluba.dreamland
+package com.federicopintaluba.dreamland.navigation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.federicopintaluba.dreamland.R
 
 class MainActivity : AppCompatActivity() {
 
