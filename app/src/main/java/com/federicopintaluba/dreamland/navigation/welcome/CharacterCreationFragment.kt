@@ -76,7 +76,7 @@ class CharacterCreationFragment : Fragment() {
 
     private fun checkIfCharacterNameIsValid(): Boolean {
         if (character_name_edit_text.text.isEmpty()) {
-            showErrorDialog("You must select a name for the character!")
+            showErrorDialog(getString(R.string.empty_character_name_error))
             return false
         }
 

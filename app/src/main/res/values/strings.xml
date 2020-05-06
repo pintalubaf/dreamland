@@ -10,6 +10,7 @@
     <string name="barbarian_description">For some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just a battle frenzy but also uncanny reflexes, resilience, and feats of strength.</string>
     <string name="ranger_description">Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.</string>
     <string name="sorcerer_description">Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. No one chooses sorcery; the power chooses the sorcerer.</string>
+    <string name="empty_character_name_error">You must select a name for the character!</string>
     <string name="character_creation_confirmation_message"><![CDATA[You are about to create a Character named <b>%1$s</b>, of the extraordinary class <b>%2$s</b>. <br><br>Should we proceed?]]></string>
     <string name="character_class_attributes"><![CDATA[<b>HP:</b> %1$d <b>ATK:</b> %2$d <b>DEF:</b> %3$d <b>SPD:</b> %4$d]]></string>
     <string name="start_adventure">Start Adventure!</string>
