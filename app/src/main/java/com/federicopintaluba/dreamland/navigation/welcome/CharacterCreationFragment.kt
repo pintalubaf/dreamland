@@ -12,6 +12,7 @@ import com.federicopintaluba.dreamland.character_classes.BarbarianClass
 import com.federicopintaluba.dreamland.character_classes.CharacterClass
 import com.federicopintaluba.dreamland.character_classes.RangerClass
 import com.federicopintaluba.dreamland.character_classes.SorcererClass
+import com.federicopintaluba.dreamland.preferences.PreferenceManager
 import kotlinx.android.synthetic.main.fragment_character_creation.*
 
 class CharacterCreationFragment : Fragment() {
@@ -97,6 +98,7 @@ class CharacterCreationFragment : Fragment() {
                 )
             )
             .setPositiveButton(R.string.start_adventure) { dialog, _ ->
+                startAdventure()
                 dialog.dismiss()
             }
             .setNegativeButton(R.string.cancel) { dialog, _ ->
@@ -104,6 +106,11 @@ class CharacterCreationFragment : Fragment() {
             }
 
         builder.create().show()
+    }
+
+    private fun startAdventure() {
+        val preferenceManager = PreferenceManager(requireContext())
+        preferenceManager.characterCreated = true
     }
 
     private fun showErrorDialog(errorMessage: String) {
