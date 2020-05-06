@@ -6,10 +6,32 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/welcome_screen_title"
         style="@style/Text.Title.Bold"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/margin_huge"
         android:text="@string/dreamland"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome_screen_description"
+        style="@style/Text"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_big"
+        android:layout_marginEnd="@dimen/margin_big"
+        android:text="@string/welcome_screen_description"
+        app:layout_constraintBottom_toTopOf="@id/create_character_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_screen_title" />
+
+    <Button
+        android:id="@+id/create_character_button"
+        style="@style/WrapLayout"
+        android:layout_marginBottom="@dimen/margin_huge"
+        android:text="@string/create_character"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

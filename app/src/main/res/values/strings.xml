@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Dreamland</string>
     <string name="dreamland">Dreamland</string>
+    <string name="welcome_screen_description">You don\'t have a created character yet, what are you waiting for?</string>
+    <string name="create_character">Create character</string>
 </resources>
