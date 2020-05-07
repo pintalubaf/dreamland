@@ -13,6 +13,7 @@ class PreferenceKey {
         const val CHARACTER_CURRENT_HP = "character_current_hp"
         const val CHARACTER_ATK = "character_atk"
         const val CHARACTER_DEF = "character_def"
-        const val CHARACTER_SPD = "character_spd"
+        const val CHARACTER_GOLD = "character_gold"
+        const val CHARACTER_XP = "character_xp"
     }
 }

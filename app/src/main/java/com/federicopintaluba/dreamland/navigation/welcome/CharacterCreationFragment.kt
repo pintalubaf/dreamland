@@ -61,8 +61,7 @@ class CharacterCreationFragment : Fragment() {
                     getString(R.string.character_class_attributes),
                     selectedClass.startingHp,
                     selectedClass.startingAtk,
-                    selectedClass.startingDef,
-                    selectedClass.startingSpd
+                    selectedClass.startingDef
                 )
             )
     }
@@ -127,7 +126,6 @@ class CharacterCreationFragment : Fragment() {
         preferenceManager.characterCurrentHp = selectedClass.startingHp
         preferenceManager.characterAtk = selectedClass.startingAtk
         preferenceManager.characterDef = selectedClass.startingDef
-        preferenceManager.characterSpd = selectedClass.startingSpd
     }
 
     private fun showErrorDialog(errorMessage: String) {

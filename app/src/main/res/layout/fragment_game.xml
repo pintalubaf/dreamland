@@ -8,10 +8,14 @@
     tools:context=".navigation.game.GameFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/character_info_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_rounded_fill"
-        android:padding="@dimen/padding_small">
+        android:padding="@dimen/padding_small"
+        android:paddingStart="@dimen/padding_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
             android:layout_width="32dp"
@@ -94,7 +98,7 @@
             android:id="@+id/character_hp_value"
             style="@style/Text.Small"
             android:layout_marginStart="@dimen/margin_small"
-            android:textColor="@color/red"
+            android:textColor="@color/blue"
             app:layout_constraintStart_toStartOf="@id/character_hp_value_fill"
             app:layout_constraintTop_toBottomOf="@id/character_hp_value_fill"
             tools:text="50 / 50" />
@@ -103,7 +107,7 @@
             style="@style/Text.Small"
             android:layout_marginEnd="@dimen/margin_small"
             android:text="@string/hp"
-            android:textColor="@color/red"
+            android:textColor="@color/blue"
             app:layout_constraintEnd_toEndOf="@id/character_hp_value_fill"
             app:layout_constraintTop_toBottomOf="@id/character_hp_value_fill" />
 
@@ -141,20 +145,93 @@
             android:id="@+id/character_xp_value"
             style="@style/Text.Small"
             android:layout_marginStart="@dimen/margin_small"
-            android:textColor="@color/green"
+            android:textColor="@color/blue"
             app:layout_constraintStart_toStartOf="@id/character_xp_value_fill"
             app:layout_constraintTop_toBottomOf="@id/character_xp_value_fill"
             tools:text="50 / 50" />
 
         <TextView
+            android:id="@+id/character_xp_label"
             style="@style/Text.Small"
             android:layout_marginEnd="@dimen/margin_small"
             android:text="@string/xp"
-            android:textColor="@color/green"
+            android:textColor="@color/blue"
             app:layout_constraintEnd_toEndOf="@id/character_xp_value_fill"
             app:layout_constraintTop_toBottomOf="@id/character_xp_value_fill" />
+
+        <ImageView
+            android:id="@+id/character_gold_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_tiny"
+            android:src="@drawable/icon_gold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/character_gold_value" />
+
+        <TextView
+            android:id="@+id/character_gold_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/character_gold_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/character_gold_icon"
+            tools:text="200" />
+
+        <ImageView
+            android:id="@+id/character_atk_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:src="@drawable/icon_sword_b"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/character_xp_label" />
+
+        <TextView
+            android:id="@+id/character_atk_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@id/character_atk_icon"
+            app:layout_constraintStart_toEndOf="@id/character_atk_icon"
+            app:layout_constraintTop_toTopOf="@id/character_atk_icon"
+            tools:text="Attack: 200" />
+
+        <ImageView
+            android:id="@+id/character_def_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/margin_tiny"
+            android:src="@drawable/icon_shield_c"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/character_atk_icon" />
+
+        <TextView
+            android:id="@+id/character_def_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@id/character_def_icon"
+            app:layout_constraintStart_toEndOf="@id/character_def_icon"
+            app:layout_constraintTop_toTopOf="@id/character_def_icon"
+            tools:text="Defense: 200" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <View
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@id/character_info_container"
+        app:layout_constraintStart_toStartOf="@id/character_info_container"
+        app:layout_constraintTop_toTopOf="@id/character_info_container" />
     <!--
 
 

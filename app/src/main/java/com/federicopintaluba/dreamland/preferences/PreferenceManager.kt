@@ -40,7 +40,11 @@ class PreferenceManager(context: Context) {
         get() = preferences.getInt(PreferenceKey.CHARACTER_DEF, 0)
         set(value) = preferences.edit().putInt(PreferenceKey.CHARACTER_DEF, value).apply()
 
-    var characterSpd: Int
-        get() = preferences.getInt(PreferenceKey.CHARACTER_SPD, 0)
-        set(value) = preferences.edit().putInt(PreferenceKey.CHARACTER_SPD, value).apply()
+    var characterGold: Int
+        get() = preferences.getInt(PreferenceKey.CHARACTER_GOLD, 0)
+        set(value) = preferences.edit().putInt(PreferenceKey.CHARACTER_GOLD, value).apply()
+
+    var characterXp: Int
+        get() = preferences.getInt(PreferenceKey.CHARACTER_XP, 0)
+        set(value) = preferences.edit().putInt(PreferenceKey.CHARACTER_XP, value).apply()
 }
