@@ -5,192 +5,207 @@
     style="@style/ContainerLayout"
     tools:context=".navigation.welcome.CharacterCreationFragment">
 
-    <TextView
-        android:id="@+id/character_creation_title"
-        style="@style/Text.Title.Bold"
-        android:layout_marginTop="@dimen/margin_huge"
-        android:text="@string/create_character"
-        android:textColor="@color/blue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/character_creation_description"
-        style="@style/Text"
-        android:layout_width="0dp"
-        android:layout_marginStart="@dimen/margin_big"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:layout_marginEnd="@dimen/margin_big"
-        android:gravity="center"
-        android:text="@string/character_creation_description"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_creation_title" />
-
-    <EditText
-        android:id="@+id/character_name_edit_text"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_big"
-        android:background="@drawable/shape_rounded_blue"
-        android:hint="@string/what_s_your_name"
-        android:importantForAutofill="no"
-        android:inputType="textCapWords"
-        android:maxLength="20"
-        android:padding="@dimen/padding_small"
-        android:textColorHint="@color/light_gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_creation_description" />
-
-    <RadioGroup
-        android:id="@+id/class_radio_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_big"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_name_edit_text">
-
-        <RadioButton
-            android:id="@+id/class_barbarian_radio"
-            style="@style/CharacterRadioButton"
-            android:checked="true"
-            android:drawableTop="@drawable/icon_sword_b_small"
-            android:text="@string/barbarian" />
-
-        <RadioButton
-            android:id="@+id/class_ranger_radio"
-            style="@style/CharacterRadioButton"
-            android:drawableTop="@drawable/icon_arrow_small"
-            android:text="@string/ranger" />
-
-        <RadioButton
-            android:id="@+id/class_sorcerer_radio"
-            style="@style/CharacterRadioButton"
-            android:drawableTop="@drawable/icon_purplegem_small"
-            android:text="@string/sorcerer" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/character_class_description"
-        style="@style/Text"
-        android:layout_width="0dp"
-        android:layout_marginStart="@dimen/margin_big"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:layout_marginEnd="@dimen/margin_big"
-        android:gravity="center"
-        android:text="@string/barbarian_description"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/class_radio_group" />
-
-    <LinearLayout
-        android:id="@+id/character_class_attributes"
-        style="@style/FullWidthLayout"
-        android:layout_marginStart="@dimen/margin_big"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:layout_marginEnd="@dimen/margin_big"
-        android:weightSum="3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_class_description">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/character_attribute_hp_icon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/status_icon_soul_gem"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/character_attribute_hp_value"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/character_attribute_hp_value"
-                style="@style/WrapLayout"
-                android:layout_marginStart="@dimen/margin_small"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:textColor="@color/blue"
-                app:layout_constraintBottom_toBottomOf="@id/character_attribute_hp_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/character_attribute_hp_icon"
-                app:layout_constraintTop_toTopOf="@id/character_attribute_hp_icon"
-                tools:text="HP: 200" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/character_attribute_atk_icon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/icon_sword_b"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/character_attribute_atk_value"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/character_attribute_atk_value"
-                style="@style/WrapLayout"
-                android:layout_marginStart="@dimen/margin_small"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:textColor="@color/blue"
-                app:layout_constraintBottom_toBottomOf="@id/character_attribute_atk_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/character_attribute_atk_icon"
-                app:layout_constraintTop_toTopOf="@id/character_attribute_atk_icon"
-                tools:text="ATK: 200" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/character_attribute_def_icon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/icon_shield_c"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/character_attribute_def_value"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/character_attribute_def_value"
-                style="@style/WrapLayout"
-                android:layout_marginStart="@dimen/margin_small"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:textColor="@color/blue"
-                app:layout_constraintBottom_toBottomOf="@id/character_attribute_def_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/character_attribute_def_icon"
-                app:layout_constraintTop_toTopOf="@id/character_attribute_def_icon"
-                tools:text="DEF: 200" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/create_character_button"
-        style="@style/Button"
-        android:text="@string/create_character"
+    <ScrollView
+        style="@style/ContainerLayout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_class_attributes"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/FullWidthLayout">
+
+            <TextView
+                android:id="@+id/character_creation_title"
+                style="@style/Text.Title.Bold"
+                android:layout_marginTop="@dimen/margin_huge"
+                android:text="@string/create_character"
+                android:textColor="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/character_creation_description"
+                style="@style/Text"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/margin_big"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_big"
+                android:gravity="center"
+                android:text="@string/character_creation_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/character_creation_title" />
+
+            <EditText
+                android:id="@+id/character_name_edit_text"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_big"
+                android:background="@drawable/shape_rounded_blue"
+                android:hint="@string/what_s_your_name"
+                android:importantForAutofill="no"
+                android:inputType="textCapWords"
+                android:maxLength="20"
+                android:padding="@dimen/padding_small"
+                android:textColorHint="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/character_creation_description" />
+
+            <RadioGroup
+                android:id="@+id/class_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_big"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/character_name_edit_text">
+
+                <RadioButton
+                    android:id="@+id/class_barbarian_radio"
+                    style="@style/CharacterRadioButton"
+                    android:checked="true"
+                    android:drawableTop="@drawable/icon_sword_b_small"
+                    android:text="@string/barbarian" />
+
+                <RadioButton
+                    android:id="@+id/class_ranger_radio"
+                    style="@style/CharacterRadioButton"
+                    android:drawableTop="@drawable/icon_arrow_small"
+                    android:text="@string/ranger" />
+
+                <RadioButton
+                    android:id="@+id/class_sorcerer_radio"
+                    style="@style/CharacterRadioButton"
+                    android:drawableTop="@drawable/icon_purplegem_small"
+                    android:text="@string/sorcerer" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/character_class_description"
+                style="@style/Text"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/margin_big"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_big"
+                android:gravity="center"
+                android:text="@string/barbarian_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/class_radio_group" />
+
+            <LinearLayout
+                android:id="@+id/character_class_attributes"
+                style="@style/FullWidthLayout"
+                android:layout_marginStart="@dimen/margin_big"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_big"
+                android:weightSum="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/character_class_description">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/character_attribute_hp_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/status_icon_soul_gem"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/character_attribute_hp_value"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/character_attribute_hp_value"
+                        style="@style/WrapLayout"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:textColor="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="@id/character_attribute_hp_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/character_attribute_hp_icon"
+                        app:layout_constraintTop_toTopOf="@id/character_attribute_hp_icon"
+                        tools:text="HP: 200" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/character_attribute_atk_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/icon_sword_b"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/character_attribute_atk_value"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/character_attribute_atk_value"
+                        style="@style/WrapLayout"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:textColor="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="@id/character_attribute_atk_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/character_attribute_atk_icon"
+                        app:layout_constraintTop_toTopOf="@id/character_attribute_atk_icon"
+                        tools:text="ATK: 200" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/character_attribute_def_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/icon_shield_c"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/character_attribute_def_value"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/character_attribute_def_value"
+                        style="@style/WrapLayout"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:textColor="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="@id/character_attribute_def_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/character_attribute_def_icon"
+                        app:layout_constraintTop_toTopOf="@id/character_attribute_def_icon"
+                        tools:text="DEF: 200" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/create_character_button"
+                style="@style/Button"
+                android:layout_marginTop="@dimen/margin_big"
+                android:text="@string/create_character"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/character_class_attributes"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
