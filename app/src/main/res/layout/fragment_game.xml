@@ -225,6 +225,46 @@
             tools:text="Defense: 200" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hunt_container"
+        style="@style/FullWidthLayout"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@android:color/white"
+        android:padding="@dimen/padding_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/character_info_container">
+
+        <Button
+            android:id="@+id/hunt_button"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:text="@string/hunt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hunt_description"
+            style="@style/Text.Small"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/hunt_description"
+            android:textColor="@color/blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hunt_button" />
+
+        <TextView
+            android:id="@+id/hunt_availability"
+            style="@style/Text.Small.Bold"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center_horizontal"
+            android:text="@string/hunting_available"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hunt_description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <View
         android:layout_width="4dp"
         android:layout_height="0dp"
@@ -232,6 +272,14 @@
         app:layout_constraintBottom_toBottomOf="@id/character_info_container"
         app:layout_constraintStart_toStartOf="@id/character_info_container"
         app:layout_constraintTop_toTopOf="@id/character_info_container" />
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@id/hunt_container"
+        app:layout_constraintStart_toStartOf="@id/hunt_container"
+        app:layout_constraintTop_toTopOf="@id/hunt_container" />
     <!--
 
 
@@ -362,33 +410,7 @@
             app:layout_constraintTop_toTopOf="@id/character_spd_label"
             tools:text="10" />
 
-        <Button
-            android:id="@+id/hunt_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_huge"
-            android:text="@string/hunt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/character_spd_value" />
 
-        <TextView
-            android:id="@+id/hunt_description"
-            style="@style/Text.Small"
-            android:layout_width="match_parent"
-            android:gravity="center_horizontal"
-            android:text="@string/hunt_description"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/hunt_button" />
-
-        <TextView
-            android:id="@+id/hunt_availability"
-            style="@style/Text.Small.Bold"
-            android:layout_width="match_parent"
-            android:gravity="center_horizontal"
-            android:text="@string/hunting_available"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/hunt_description" />
 
         <Button
             android:id="@+id/adventure_button"
