@@ -23,11 +23,17 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="Button" parent="WrapLayout">
+    <style name="Button" parent="FullWidthLayout">
         <item name="android:background">@color/blue</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:paddingStart">@dimen/padding_big</item>
         <item name="android:paddingEnd">@dimen/padding_big</item>
+    </style>
+
+    <style name="Button.Reward">
+        <item name="android:drawableStart">@drawable/icon_treasure_tiny</item>
+        <item name="android:background">@color/yellow</item>
+        <item name="android:textColor">@color/dark_yellow</item>
     </style>
 
     <style name="Text">

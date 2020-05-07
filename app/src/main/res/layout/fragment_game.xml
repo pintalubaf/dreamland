@@ -225,6 +225,30 @@
             tools:text="Defense: 200" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/daily_reward_container"
+        style="@style/FullWidthLayout"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@android:color/white"
+        android:padding="@dimen/padding_medium"
+        app:layout_constraintBottom_toTopOf="@id/hunt_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/character_info_container">
+
+        <Button
+            android:id="@+id/daily_reward_button"
+            style="@style/Button.Reward"
+            android:layout_marginTop="@dimen/margin_tiny"
+            android:layout_marginBottom="@dimen/margin_tiny"
+            android:text="@string/daily_reward"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/hunt_container"
         style="@style/FullWidthLayout"
@@ -233,12 +257,12 @@
         android:padding="@dimen/padding_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_info_container">
+        app:layout_constraintTop_toBottomOf="@id/daily_reward_container">
 
         <Button
             android:id="@+id/hunt_button"
             style="@style/Button"
-            android:layout_width="match_parent"
+            android:drawableStart="@drawable/icon_horner_tiny"
             android:text="@string/hunt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -248,6 +272,7 @@
             android:id="@+id/hunt_description"
             style="@style/Text.Small"
             android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_tiny"
             android:gravity="center_horizontal"
             android:text="@string/hunt_description"
             android:textColor="@color/blue"
@@ -256,7 +281,7 @@
 
         <TextView
             android:id="@+id/hunt_availability"
-            style="@style/Text.Small.Bold"
+            style="@style/Text.Small"
             android:layout_width="match_parent"
             android:layout_marginTop="@dimen/margin_small"
             android:gravity="center_horizontal"
@@ -272,6 +297,14 @@
         app:layout_constraintBottom_toBottomOf="@id/character_info_container"
         app:layout_constraintStart_toStartOf="@id/character_info_container"
         app:layout_constraintTop_toTopOf="@id/character_info_container" />
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@id/daily_reward_container"
+        app:layout_constraintStart_toStartOf="@id/daily_reward_container"
+        app:layout_constraintTop_toTopOf="@id/daily_reward_container" />
 
     <View
         android:layout_width="4dp"

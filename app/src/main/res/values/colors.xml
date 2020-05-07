@@ -6,6 +6,8 @@
     <color name="dark_blue">#6573B1</color>
     <color name="pink">#FF88DC</color>
     <color name="green">#70CC13</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="dark_yellow">#5E5614</color>
     <color name="red">#FF5154</color>
     <color name="dark_red">#AE3739</color>
 </resources>
