@@ -23,6 +23,13 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="Button" parent="WrapLayout">
+        <item name="android:background">@color/blue</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingStart">@dimen/padding_big</item>
+        <item name="android:paddingEnd">@dimen/padding_big</item>
+    </style>
+
     <style name="Text">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -50,8 +57,8 @@
     </style>
 
     <style name="CharacterRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">92sp</item>
+        <item name="android:layout_height">104dp</item>
         <item name="android:layout_margin">@dimen/margin_small</item>
         <item name="android:background">@drawable/selector_background</item>
         <item name="android:button">@android:color/transparent</item>

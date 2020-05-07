@@ -5,14 +5,25 @@
     style="@style/ContainerLayout"
     tools:context=".navigation.welcome.WelcomeFragment">
 
-    <TextView
-        android:id="@+id/welcome_screen_title"
-        style="@style/Text.Title.Bold"
+    <ImageView
+        android:id="@+id/welcome_screen_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_huge"
-        android:text="@string/dreamland"
+        android:src="@drawable/user_info_profile_monster"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome_screen_title"
+        style="@style/Text.Title.Bold"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/dreamland"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_screen_icon" />
 
     <TextView
         android:id="@+id/welcome_screen_description"
@@ -29,7 +40,7 @@
 
     <Button
         android:id="@+id/create_character_button"
-        style="@style/WrapLayout"
+        style="@style/Button"
         android:layout_marginBottom="@dimen/margin_huge"
         android:text="@string/create_character"
         app:layout_constraintBottom_toBottomOf="parent"

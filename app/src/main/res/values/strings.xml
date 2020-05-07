@@ -12,14 +12,15 @@
     <string name="sorcerer_description">Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. No one chooses sorcery; the power chooses the sorcerer.</string>
     <string name="empty_character_name_error">You must select a name for the character!</string>
     <string name="character_creation_confirmation_message"><![CDATA[You are about to create a Character named <b>%1$s</b>, of the extraordinary class <b>%2$s</b>. <br><br>Should we proceed?]]></string>
-    <string name="character_class_attributes"><![CDATA[<b>HP:</b> %1$d <b>ATK:</b> %2$d <b>DEF:</b> %3$d]]></string>
+    <string name="character_class_attribute_hp"><![CDATA[<b>HP:</b> %1$d]]></string>
+    <string name="character_class_attribute_atk"><![CDATA[<b>ATK:</b> %1$d]]></string>
+    <string name="character_class_attribute_def"><![CDATA[<b>DEF:</b> %1$d]]></string>
     <string name="start_adventure">Start Adventure!</string>
     <string name="cancel">Cancel</string>
     <string name="character_class">Character Class</string>
     <string name="atk"><![CDATA[<b>Attack:</b> %1$d]]></string>
     <string name="hp">Health</string>
     <string name="def"><![CDATA[<b>Defense:</b> %1$d]]></string>
-    <string name="spd">SPD</string>
     <string name="xp">Experience</string>
     <string name="slash_format">%1$s / %2$s</string>
     <string name="hunt">Hunt</string>

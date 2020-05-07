@@ -55,15 +55,24 @@ class CharacterCreationFragment : Fragment() {
     }
 
     private fun updateCharacterClassAttributesDescription() {
-        character_class_attributes.text =
-            Html.fromHtml(
-                String.format(
-                    getString(R.string.character_class_attributes),
-                    selectedClass.startingHp,
-                    selectedClass.startingAtk,
-                    selectedClass.startingDef
-                )
+        character_attribute_hp_value.text = Html.fromHtml(
+            String.format(
+                getString(R.string.character_class_attribute_hp),
+                selectedClass.startingHp
             )
+        )
+        character_attribute_atk_value.text = Html.fromHtml(
+            String.format(
+                getString(R.string.character_class_attribute_atk),
+                selectedClass.startingAtk
+            )
+        )
+        character_attribute_def_value.text = Html.fromHtml(
+            String.format(
+                getString(R.string.character_class_attribute_def),
+                selectedClass.startingDef
+            )
+        )
     }
 
     private fun setCreateCharacterButtonListener() {
