@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_welcomeFragment_to_characterCreationFragment"
             app:destination="@id/characterCreationFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"

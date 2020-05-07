@@ -6,5 +6,5 @@ class BarbarianClass(
     override val startingDef: Int = 10,
     override val startingSpd: Int = 8
 ) : CharacterClass {
-    override fun displayClassName() = "Barbarian"
+    override fun className() = CharacterClassName.BARBARIAN
 }

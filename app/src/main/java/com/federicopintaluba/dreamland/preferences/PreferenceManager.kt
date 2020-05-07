@@ -16,6 +16,14 @@ class PreferenceManager(context: Context) {
         get() = preferences.getString(PreferenceKey.CHARACTER_NAME, "")
         set(value) = preferences.edit().putString(PreferenceKey.CHARACTER_NAME, value).apply()
 
+    var characterClass: String?
+        get() = preferences.getString(PreferenceKey.CHARACTER_CLASS, "")
+        set(value) = preferences.edit().putString(PreferenceKey.CHARACTER_CLASS, value).apply()
+
+    var characterLevel: Int
+        get() = preferences.getInt(PreferenceKey.CHARACTER_LEVEL, 0)
+        set(value) = preferences.edit().putInt(PreferenceKey.CHARACTER_LEVEL, value).apply()
+
     var characterMaxHp: Int
         get() = preferences.getInt(PreferenceKey.CHARACTER_MAX_HP, 0)
         set(value) = preferences.edit().putInt(PreferenceKey.CHARACTER_MAX_HP, value).apply()

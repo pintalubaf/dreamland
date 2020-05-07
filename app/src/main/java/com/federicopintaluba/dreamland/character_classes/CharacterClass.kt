@@ -5,5 +5,5 @@ interface CharacterClass {
     val startingAtk: Int
     val startingDef: Int
     val startingSpd: Int
-    fun displayClassName(): String
+    fun className(): String
 }

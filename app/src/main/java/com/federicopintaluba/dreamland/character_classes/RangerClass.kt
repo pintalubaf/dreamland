@@ -6,5 +6,5 @@ class RangerClass(
     override val startingDef: Int = 8,
     override val startingSpd: Int = 12
 ) : CharacterClass {
-    override fun displayClassName() = "Ranger"
+    override fun className() = CharacterClassName.RANGER
 }

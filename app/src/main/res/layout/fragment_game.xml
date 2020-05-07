@@ -4,123 +4,359 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/margin_medium"
+    android:padding="@dimen/margin_medium"
     tools:context=".navigation.game.GameFragment">
 
-    <ImageView
-        android:id="@+id/character_class_icon"
-        style="@style/WrapLayout"
-        android:contentDescription="@string/character_class"
-        android:src="@drawable/ic_sorcerer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/character_name_value"
-        style="@style/Text.Title.Bold"
-        android:layout_marginStart="@dimen/margin_small"
-        app:layout_constraintBottom_toBottomOf="@id/character_class_icon"
-        app:layout_constraintStart_toEndOf="@id/character_class_icon"
-        app:layout_constraintTop_toTopOf="@id/character_class_icon"
-        tools:text="Character name" />
-
-    <TextView
-        android:id="@+id/character_hp_label"
-        style="@style/Text.Bold"
-        android:layout_marginStart="@dimen/margin_medium"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:drawableStart="@drawable/ic_hp"
-        android:drawablePadding="@dimen/padding_small"
-        android:text="@string/hp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_class_icon" />
-
-    <TextView
-        android:id="@+id/character_max_hp_value"
-        style="@style/Text"
-        app:layout_constraintBottom_toBottomOf="@id/character_hp_value"
-        app:layout_constraintStart_toEndOf="@id/character_hp_value"
-        app:layout_constraintTop_toTopOf="@id/character_hp_value"
-        tools:text="/100" />
-
-    <View
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray"
-        app:layout_constraintTop_toBottomOf="@id/character_max_hp_value" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rounded_fill"
+        android:padding="@dimen/padding_small">
 
-    <TextView
-        android:id="@+id/character_hp_value"
-        style="@style/Text"
-        app:layout_constraintBottom_toBottomOf="@id/character_hp_label"
-        app:layout_constraintStart_toEndOf="@id/character_hp_label"
-        app:layout_constraintTop_toTopOf="@id/character_hp_label"
-        tools:text="10" />
+        <RelativeLayout
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/shape_oval_fill_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/character_atk_label"
-        style="@style/Text.Bold"
-        android:layout_marginTop="@dimen/margin_small"
-        android:drawableStart="@drawable/ic_atk"
-        android:drawablePadding="@dimen/padding_small"
-        android:text="@string/atk"
-        app:layout_constraintStart_toStartOf="@id/character_hp_label"
-        app:layout_constraintTop_toBottomOf="@id/character_hp_label" />
+            <TextView
+                android:id="@+id/character_level_value"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="1" />
+        </RelativeLayout>
 
-    <TextView
-        android:id="@+id/character_atk_value"
-        style="@style/Text"
-        app:layout_constraintBottom_toBottomOf="@id/character_atk_label"
-        app:layout_constraintStart_toEndOf="@id/character_atk_label"
-        app:layout_constraintTop_toTopOf="@id/character_atk_label"
+        <ImageView
+            android:id="@+id/character_class_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/character_class"
+            android:src="@drawable/icon_sword_b"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        tools:text="10" />
+        <TextView
+            android:id="@+id/character_name_value"
+            style="@style/Text.Title.Bold"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toTopOf="@id/character_class_value"
+            app:layout_constraintStart_toEndOf="@id/character_class_icon"
+            app:layout_constraintTop_toTopOf="@id/character_class_icon"
+            tools:text="Fedor" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray"
-        app:layout_constraintTop_toBottomOf="@id/character_atk_value" />
+        <TextView
+            android:id="@+id/character_class_value"
+            style="@style/Text.Small"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintBottom_toBottomOf="@id/character_class_icon"
+            app:layout_constraintStart_toEndOf="@id/character_class_icon"
+            app:layout_constraintTop_toBottomOf="@id/character_name_value"
+            tools:text="Barbarian" />
 
-    <TextView
-        android:id="@+id/character_def_label"
-        style="@style/Text.Bold"
-        android:layout_marginTop="@dimen/margin_small"
-        android:drawableStart="@drawable/ic_def"
-        android:drawablePadding="@dimen/padding_small"
-        android:text="@string/def"
-        app:layout_constraintStart_toStartOf="@id/character_atk_label"
-        app:layout_constraintTop_toBottomOf="@id/character_atk_label" />
+        <ImageView
+            android:id="@+id/character_hp_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:src="@drawable/status_icon_soul_gem"
+            app:layout_constraintStart_toStartOf="@id/character_class_icon"
+            app:layout_constraintTop_toBottomOf="@id/character_class_icon" />
 
-    <TextView
-        android:id="@+id/character_def_value"
-        style="@style/Text"
-        app:layout_constraintBottom_toBottomOf="@id/character_def_label"
-        app:layout_constraintStart_toEndOf="@id/character_def_label"
-        app:layout_constraintTop_toTopOf="@id/character_def_label"
-        tools:text="10" />
+        <ImageView
+            android:id="@+id/character_hp_value_stroke"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:src="@drawable/shape_rounded_light_grey_fill"
+            app:layout_constraintBottom_toBottomOf="@id/character_hp_value_fill"
+            app:layout_constraintEnd_toEndOf="@id/character_hp_value_fill"
+            app:layout_constraintStart_toStartOf="@id/character_hp_value_fill"
+            app:layout_constraintTop_toTopOf="@id/character_hp_value_fill" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray"
-        app:layout_constraintTop_toBottomOf="@id/character_def_value" />
+        <ImageView
+            android:id="@+id/character_hp_value_fill"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="@dimen/margin_small"
+            android:src="@drawable/clip_hp"
+            app:layout_constraintBottom_toBottomOf="@id/character_hp_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/character_hp_icon"
+            app:layout_constraintTop_toTopOf="@id/character_hp_icon" />
 
-    <TextView
-        android:id="@+id/character_spd_label"
-        style="@style/Text.Bold"
-        android:layout_marginTop="@dimen/margin_small"
-        android:drawableStart="@drawable/ic_spd"
-        android:drawablePadding="@dimen/padding_small"
-        android:text="@string/spd"
-        app:layout_constraintStart_toStartOf="@id/character_def_label"
-        app:layout_constraintTop_toBottomOf="@id/character_def_label" />
+        <TextView
+            android:id="@+id/character_hp_value"
+            style="@style/Text.Small"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textColor="@color/red"
+            app:layout_constraintStart_toStartOf="@id/character_hp_value_fill"
+            app:layout_constraintTop_toBottomOf="@id/character_hp_value_fill"
+            tools:text="50 / 50" />
 
-    <TextView
-        android:id="@+id/character_spd_value"
-        style="@style/Text"
-        app:layout_constraintBottom_toBottomOf="@id/character_spd_label"
-        app:layout_constraintStart_toEndOf="@id/character_spd_label"
-        app:layout_constraintTop_toTopOf="@id/character_spd_label"
-        tools:text="10" />
+        <TextView
+            style="@style/Text.Small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:text="@string/hp"
+            android:textColor="@color/red"
+            app:layout_constraintEnd_toEndOf="@id/character_hp_value_fill"
+            app:layout_constraintTop_toBottomOf="@id/character_hp_value_fill" />
+
+        <ImageView
+            android:id="@+id/character_xp_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:src="@drawable/icon_trophy"
+            app:layout_constraintStart_toStartOf="@id/character_hp_icon"
+            app:layout_constraintTop_toBottomOf="@id/character_hp_icon" />
+
+        <ImageView
+            android:id="@+id/character_xp_value_stroke"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:src="@drawable/shape_rounded_light_grey_fill"
+            app:layout_constraintBottom_toBottomOf="@id/character_xp_value_fill"
+            app:layout_constraintEnd_toEndOf="@id/character_xp_value_fill"
+            app:layout_constraintStart_toStartOf="@id/character_xp_value_fill"
+            app:layout_constraintTop_toTopOf="@id/character_xp_value_fill" />
+
+        <ImageView
+            android:id="@+id/character_xp_value_fill"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="@dimen/margin_small"
+            android:src="@drawable/clip_xp"
+            app:layout_constraintBottom_toBottomOf="@id/character_xp_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/character_xp_icon"
+            app:layout_constraintTop_toTopOf="@id/character_xp_icon" />
+
+        <TextView
+            android:id="@+id/character_xp_value"
+            style="@style/Text.Small"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textColor="@color/green"
+            app:layout_constraintStart_toStartOf="@id/character_xp_value_fill"
+            app:layout_constraintTop_toBottomOf="@id/character_xp_value_fill"
+            tools:text="50 / 50" />
+
+        <TextView
+            style="@style/Text.Small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:text="@string/xp"
+            android:textColor="@color/green"
+            app:layout_constraintEnd_toEndOf="@id/character_xp_value_fill"
+            app:layout_constraintTop_toBottomOf="@id/character_xp_value_fill" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+
+
+        <TextView
+            android:id="@+id/character_level_label"
+            style="@style/Text.Bold"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:drawableStart="@drawable/ic_lvl"
+            android:drawablePadding="@dimen/padding_small"
+            android:text="@string/level"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/character_class_icon" />
+
+        <TextView
+            android:id="@+id/character_level_value"
+            style="@style/Text"
+            android:layout_marginStart="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="@id/character_level_label"
+            app:layout_constraintStart_toEndOf="@id/character_level_label"
+            app:layout_constraintTop_toTopOf="@id/character_level_label"
+            tools:text="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            app:layout_constraintTop_toBottomOf="@id/character_level_value" />
+
+        <TextView
+            android:id="@+id/character_hp_label"
+            style="@style/Text.Bold"
+            android:layout_marginTop="@dimen/margin_small"
+            android:drawableStart="@drawable/ic_hp"
+            android:drawablePadding="@dimen/padding_small"
+            android:text="@string/hp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/character_level_label" />
+
+        <TextView
+            android:id="@+id/character_max_hp_value"
+            style="@style/Text"
+            app:layout_constraintBottom_toBottomOf="@id/character_hp_value"
+            app:layout_constraintStart_toEndOf="@id/character_hp_value"
+            app:layout_constraintTop_toTopOf="@id/character_hp_value"
+            tools:text="/100" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            app:layout_constraintTop_toBottomOf="@id/character_max_hp_value" />
+
+        <TextView
+            android:id="@+id/character_hp_value"
+            style="@style/Text"
+            android:layout_marginStart="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="@id/character_hp_label"
+            app:layout_constraintStart_toEndOf="@id/character_hp_label"
+            app:layout_constraintTop_toTopOf="@id/character_hp_label"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/character_atk_label"
+            style="@style/Text.Bold"
+            android:layout_marginTop="@dimen/margin_small"
+            android:drawableStart="@drawable/ic_atk"
+            android:drawablePadding="@dimen/padding_small"
+            android:text="@string/atk"
+            app:layout_constraintStart_toStartOf="@id/character_hp_label"
+            app:layout_constraintTop_toBottomOf="@id/character_hp_label" />
+
+        <TextView
+            android:id="@+id/character_atk_value"
+            style="@style/Text"
+            android:layout_marginStart="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="@id/character_atk_label"
+            app:layout_constraintStart_toEndOf="@id/character_atk_label"
+            app:layout_constraintTop_toTopOf="@id/character_atk_label"
+            tools:text="10" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            app:layout_constraintTop_toBottomOf="@id/character_atk_value" />
+
+        <TextView
+            android:id="@+id/character_def_label"
+            style="@style/Text.Bold"
+            android:layout_marginTop="@dimen/margin_small"
+            android:drawableStart="@drawable/ic_def"
+            android:drawablePadding="@dimen/padding_small"
+            android:text="@string/def"
+            app:layout_constraintStart_toStartOf="@id/character_atk_label"
+            app:layout_constraintTop_toBottomOf="@id/character_atk_label" />
+
+        <TextView
+            android:id="@+id/character_def_value"
+            style="@style/Text"
+            android:layout_marginStart="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="@id/character_def_label"
+            app:layout_constraintStart_toEndOf="@id/character_def_label"
+            app:layout_constraintTop_toTopOf="@id/character_def_label"
+            tools:text="10" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            app:layout_constraintTop_toBottomOf="@id/character_def_value" />
+
+        <TextView
+            android:id="@+id/character_spd_label"
+            style="@style/Text.Bold"
+            android:layout_marginTop="@dimen/margin_small"
+            android:drawableStart="@drawable/ic_spd"
+            android:drawablePadding="@dimen/padding_small"
+            android:text="@string/spd"
+            app:layout_constraintStart_toStartOf="@id/character_def_label"
+            app:layout_constraintTop_toBottomOf="@id/character_def_label" />
+
+        <TextView
+            android:id="@+id/character_spd_value"
+            style="@style/Text"
+            android:layout_marginStart="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="@id/character_spd_label"
+            app:layout_constraintStart_toEndOf="@id/character_spd_label"
+            app:layout_constraintTop_toTopOf="@id/character_spd_label"
+            tools:text="10" />
+
+        <Button
+            android:id="@+id/hunt_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_huge"
+            android:text="@string/hunt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/character_spd_value" />
+
+        <TextView
+            android:id="@+id/hunt_description"
+            style="@style/Text.Small"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/hunt_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hunt_button" />
+
+        <TextView
+            android:id="@+id/hunt_availability"
+            style="@style/Text.Small.Bold"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/hunting_available"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hunt_description" />
+
+        <Button
+            android:id="@+id/adventure_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/adventure"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hunt_availability" />
+
+        <TextView
+            android:id="@+id/adventure_description"
+            style="@style/Text.Small"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/adventure_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adventure_button" />
+
+        <TextView
+            android:id="@+id/adventure_availability"
+            style="@style/Text.Small.Bold"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/adventure_available"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adventure_description" />
+
+        <Button
+            android:id="@+id/shop_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/shop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adventure_availability" />
+
+        <TextView
+            android:id="@+id/shop_description"
+            style="@style/Text.Small"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/shop_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shop_button" /> -->
 </androidx.constraintlayout.widget.ConstraintLayout>

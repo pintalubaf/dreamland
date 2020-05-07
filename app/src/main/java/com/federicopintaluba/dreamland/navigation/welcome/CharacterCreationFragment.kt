@@ -94,7 +94,7 @@ class CharacterCreationFragment : Fragment() {
                     String.format(
                         getString(R.string.character_creation_confirmation_message),
                         selectedName,
-                        selectedClass.displayClassName()
+                        selectedClass.className()
                     )
                 )
             )
@@ -119,8 +119,10 @@ class CharacterCreationFragment : Fragment() {
 
     private fun setCurrentPreferences() {
         val preferenceManager = PreferenceManager(requireContext())
-        preferenceManager.characterName = selectedName
         preferenceManager.characterCreated = true
+        preferenceManager.characterName = selectedName
+        preferenceManager.characterClass = selectedClass.className()
+        preferenceManager.characterLevel = 1
         preferenceManager.characterMaxHp = selectedClass.startingHp
         preferenceManager.characterCurrentHp = selectedClass.startingHp
         preferenceManager.characterAtk = selectedClass.startingAtk

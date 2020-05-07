@@ -1,10 +1,11 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/gray</item>
-        <item name="colorPrimaryDark">@color/gray</item>
-        <item name="colorAccent">@color/gray</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="titleTextColor">@android:color/black</item>
+        <item name="colorAccent">@android:color/black</item>
     </style>
 
     <style name="ContainerLayout">
@@ -26,6 +27,14 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Text.Small">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Text.Small.Bold">
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Text.Bold">

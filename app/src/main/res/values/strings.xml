@@ -16,9 +16,18 @@
     <string name="start_adventure">Start Adventure!</string>
     <string name="cancel">Cancel</string>
     <string name="character_class">Character Class</string>
-    <string name="atk">ATK: </string>
-    <string name="hp">HP:</string>
-    <string name="def">DEF:</string>
-    <string name="spd">SPD:</string>
+    <string name="atk">ATK</string>
+    <string name="hp">HP</string>
+    <string name="def">DEF</string>
+    <string name="spd">SPD</string>
+    <string name="xp">Experience</string>
     <string name="max_hp_format">/%1$s</string>
+    <string name="hunt">Hunt</string>
+    <string name="hunt_description">You can go Hunting once every minute to gain XP and Gold.</string>
+    <string name="hunting_available">You can go Hunting now!</string>
+    <string name="adventure">Adventure</string>
+    <string name="adventure_description">Adventures can be done once every half an hour, gain large amount of XP and Gold</string>
+    <string name="adventure_available">You are able to go on an Adventure now!</string>
+    <string name="shop">Shop</string>
+    <string name="shop_description">Shop for potions and equipment!</string>
 </resources>
